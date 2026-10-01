@@ -835,5 +835,8 @@
   "• Always Proceed - Agent never asks for confirmation before executing terminal commands (except those in the Deny list). This provides the Agent with the maximum ability to operate over long periods without intervention, but also has the highest risk of an Agent executing an unsafe terminal command.\n\t\t\t\t• Request Review - Agent always asks for confirmation before executing terminal commands (except those in the Allow list).\n\n\t\t\t\tNote: A change to this setting will only apply to new messages sent to Agent. In-progress responses will use the previous setting value.\n\t\t\t\t": "• 一律繼續 - 執行終端命令前從不請求確認（拒絕清單除外）。這賦予了代理最高效的免干預持續運作能力，但執行高風險命令的風險也最高。\n• 請求審查 - 執行終端命令之前一律請求確認（允許清單除外）。\n\n注意：對此項設定的變更，僅對之後新傳送給代理的訊息生效。進行中的回應將沿用先前的設定規則。",
   "AGENT": "代理",
   "Configure the browser subagent. It requires ": "設定瀏覽器子代理。它需要安裝",
-  " to be installed. The browser subagent can be invoked by typing /browser in the conversation input box.": "。您可以透過在對話框中輸入 /browser 來呼叫瀏覽器子代理。"
+  " to be installed. The browser subagent can be invoked by typing /browser in the conversation input box.": "。您可以透過在對話框中輸入 /browser 來呼叫瀏覽器子代理。",
+  "Ask the agent": "詢問代理人",
+  "Send to conversation": "傳送至對話",
+  "Clear conversation": "清除對話"
 }

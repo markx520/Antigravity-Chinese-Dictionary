@@ -16,8 +16,8 @@
 为社区开发者与本地化爱好者提供高质量、经过防死循环清洗的母语词库资产：
 1. **纯净数据资产**：标准键值对字典，开箱即用；
 2. **多语言双模支持**：
-   - 简体中文：收录 5,514 条全量核心词条；
-   - 繁体中文：收录 5,018 条核心词条；
+   - 简体中文：收录 5,571 条全量核心词条；
+   - 繁体中文：收录 5,075 条核心词条；
 3. **数据纯净合规**：
    - 剔除翻译值包含键名自身的自递归条目，避免渲染死循环；
    - 完整保护动态占位符；
@@ -29,25 +29,25 @@
 
 ```
 Antigravity-Chinese-Dictionary/
-├── dicts/                       # 简体中文分片词典 (纯 JSON, 5,514 词条)
+├── dicts/                       # 简体中文分片词典 (纯 JSON, 5,571 词条)
 │   ├── 01-common.json           # 通用基础词汇 (2,962 词条)
-│   ├── 02-menu.json             # 顶栏与系统菜单 (371 词条)
-│   ├── 03-chat-agent.json       # 智能体与对话会话 (902 词条)
+│   ├── 02-menu.json             # 顶栏与系统菜单 (392 词条)
+│   ├── 03-chat-agent.json       # 智能体与对话会话 (905 词条)
 │   ├── 04-settings.json         # 设置中心与配置 (428 词条)
 │   ├── 05-mcp-tools.json        # MCP 与插件扩展 (328 词条)
-│   ├── 06-workbench-ide.json    # 工作台与向导编辑器 (419 词条)
-│   └── 07-notifications.json    # 通知与系统状态 (281 词条)
-├── dicts_tw/                    # 繁体中文分片词典 (纯 JSON, 5,018 词条)
+│   ├── 06-workbench-ide.json    # 工作台与向导编辑器 (450 词条)
+│   └── 07-notifications.json    # 通知与系统状态 (284 词条)
+├── dicts_tw/                    # 繁体中文分片词典 (纯 JSON, 5,075 词条)
 │   ├── 01-common.json           # 通用基础词汇 (2,606 词条)
-│   ├── 02-menu.json             # 顶栏与系统菜单 (368 词条)
-│   ├── 03-chat-agent.json       # 智能体与对话会话 (837 词条)
+│   ├── 02-menu.json             # 顶栏与系统菜单 (389 词条)
+│   ├── 03-chat-agent.json       # 智能体与对话会话 (840 词条)
 │   ├── 04-settings.json         # 设置中心与配置 (416 词条)
 │   ├── 05-mcp-tools.json        # MCP 与插件扩展 (302 词条)
-│   ├── 06-workbench-ide.json    # 工作台与向导编辑器 (394 词条)
-│   └── 07-notifications.json    # 通知与系统状态 (272 词条)
+│   ├── 06-workbench-ide.json    # 工作台与向导编辑器 (425 词条)
+│   └── 07-notifications.json    # 通知与系统状态 (275 词条)
 ├── dist/                        # 聚合单文件主字典 (开箱即用)
-│   ├── zh-cn-ui-dictionary.json # 权威简体主字典 (5,514 词条)
-│   └── zh-tw-ui-dictionary.json # 权威繁体主字典 (5,018 词条)
+│   ├── zh-cn-ui-dictionary.json # 权威简体主字典 (5,571 词条)
+│   └── zh-tw-ui-dictionary.json # 权威繁体主字典 (5,075 词条)
 ├── LICENSE                      # 开源许可证
 ├── README.md                    # 中文说明文档
 └── README_EN.md                 # 英文说明文档

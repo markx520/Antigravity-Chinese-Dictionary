@@ -270,5 +270,8 @@
   "You have used some of your weekly limit, it will fully refresh in": "您已使用部分本週額度，系統將完全重置於",
   "Your plan's baseline quota will refresh on": "你的套餐基礎額度將重新整理於",
   "Your plan’s baseline quota will refresh on": "你的套餐基礎額度將重新整理於",
-  "✖ Error: File does not exist or is empty": "✖ 錯誤：檔案不存在或為空"
+  "✖ Error: File does not exist or is empty": "✖ 錯誤：檔案不存在或為空",
+  "Antigravity opened on Windows instead.": "Antigravity 改為在 Windows 上開啟。",
+  "Failed to list WSL distros:": "取得 WSL 發行版清單失敗：",
+  "Failed to persist WSL distro choice:": "儲存 WSL 發行版設定失敗："
 }

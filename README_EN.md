@@ -15,8 +15,8 @@ A clean, comprehensive, and verified Chinese localization dictionary dataset for
 
 1. **Pure Data**: Standard JSON key-value pairs, ready to use;
 2. **Dual Mode**:
-   - Simplified Chinese: 5,514 verified terms;
-   - Traditional Chinese: 5,018 terms;
+   - Simplified Chinese: 5,571 verified terms;
+   - Traditional Chinese: 5,075 terms;
 3. **Clean & Verified**:
    - Zero-recursion safety: eliminated self-recursive translation keys;
    - Preserved dynamic placeholders;
@@ -28,25 +28,25 @@ A clean, comprehensive, and verified Chinese localization dictionary dataset for
 
 ```
 Antigravity-Chinese-Dictionary/
-├── dicts/                       # Simplified Chinese slices (5,514 terms)
+├── dicts/                       # Simplified Chinese slices (5,571 terms)
 │   ├── 01-common.json           # General vocabulary (2,962 terms)
-│   ├── 02-menu.json             # Top bar & system menus (371 terms)
-│   ├── 03-chat-agent.json       # Agent & conversation (902 terms)
+│   ├── 02-menu.json             # Top bar & system menus (392 terms)
+│   ├── 03-chat-agent.json       # Agent & conversation (905 terms)
 │   ├── 04-settings.json         # Settings & configuration (428 terms)
 │   ├── 05-mcp-tools.json        # MCP tools & extensions (328 terms)
-│   ├── 06-workbench-ide.json    # Workbench & wizard (419 terms)
-│   └── 07-notifications.json    # Notifications & status (281 terms)
-├── dicts_tw/                    # Traditional Chinese slices (5,018 terms)
+│   ├── 06-workbench-ide.json    # Workbench & wizard (450 terms)
+│   └── 07-notifications.json    # Notifications & status (284 terms)
+├── dicts_tw/                    # Traditional Chinese slices (5,075 terms)
 │   ├── 01-common.json           # General vocabulary (2,606 terms)
-│   ├── 02-menu.json             # Top bar & system menus (368 terms)
-│   ├── 03-chat-agent.json       # Agent & conversation (837 terms)
+│   ├── 02-menu.json             # Top bar & system menus (389 terms)
+│   ├── 03-chat-agent.json       # Agent & conversation (840 terms)
 │   ├── 04-settings.json         # Settings & configuration (416 terms)
 │   ├── 05-mcp-tools.json        # MCP tools & extensions (302 terms)
-│   ├── 06-workbench-ide.json    # Workbench & wizard (394 terms)
-│   └── 07-notifications.json    # Notifications & status (272 terms)
+│   ├── 06-workbench-ide.json    # Workbench & wizard (425 terms)
+│   └── 07-notifications.json    # Notifications & status (275 terms)
 ├── dist/                        # Complete dictionaries
-│   ├── zh-cn-ui-dictionary.json # Full Simplified Chinese dictionary (5,514 terms)
-│   └── zh-tw-ui-dictionary.json # Full Traditional Chinese dictionary (5,018 terms)
+│   ├── zh-cn-ui-dictionary.json # Full Simplified Chinese dictionary (5,571 terms)
+│   └── zh-tw-ui-dictionary.json # Full Traditional Chinese dictionary (5,075 terms)
 ├── LICENSE                      # MIT License
 ├── README.md                    # Chinese documentation
 └── README_EN.md                 # English documentation

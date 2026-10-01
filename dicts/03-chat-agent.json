@@ -900,5 +900,8 @@
   "• Includes nested subagent costs": "• 包含嵌套子智能体成本",
   "• Request Review - Agent always asks for confirmation before executing terminal commands (except those in the Allow list).": "• 请求审查 - 只要不在您设定的白名单中，智能体在执行任何终端命令之前都会始终请求您的明确许可。",
   "✨ AI Nexus · Auto Dispatcher": "✨ AI Nexus · 智能调度管家",
-  "显示 54 more": "展开其余 54 项"
+  "显示 54 more": "展开其余 54 项",
+  "Ask the agent": "询问智能体",
+  "Send to conversation": "发送到对话",
+  "Clear conversation": "清空对话"
 }
