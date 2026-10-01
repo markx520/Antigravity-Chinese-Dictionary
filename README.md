@@ -97,7 +97,18 @@ Antigravity-Chinese-Dictionary/
 
 ---
 
-## 6. 免责声明与禁止倒卖
+## 6. 贡献者
+
+本项目由开源社区与以下贡献者共同维护：
+
+| [<img src="https://github.com/markx520.png" width="80" height="80" style="border-radius: 50%;" alt="markx520" /><br /><sub><b>markx520</b></sub>](https://github.com/markx520)<br />[核心维护者 / Creator] |
+| :---: |
+
+欢迎更多开发者参与贡献！详见 [分片词典目录](dicts/)。
+
+---
+
+## 7. 免责声明与禁止倒卖
 
 1. **研究目的**：本项目仅为文本数据集，供开发者进行软件本地化与词汇对齐参考；
 2. **免责条款**：本项目按现状提供，使用者自行评估并承担使用风险；

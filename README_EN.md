@@ -92,7 +92,18 @@ Join the community for localization contributions, prompt engineering, and devel
 
 ---
 
-## 6. Disclaimer
+## 6. Contributors
+
+Maintained by the open-source community and the following contributors:
+
+| [<img src="https://github.com/markx520.png" width="80" height="80" style="border-radius: 50%;" alt="markx520" /><br /><sub><b>markx520</b></sub>](https://github.com/markx520)<br />[Creator & Maintainer] |
+| :---: |
+
+Contributions are welcome! Please feel free to submit an Issue or Pull Request.
+
+---
+
+## 7. Disclaimer
 
 1. **Research Purpose**: For software localization and terminology alignment research;
 2. **As-Is Basis**: Provided under MIT License without warranty of any kind;
