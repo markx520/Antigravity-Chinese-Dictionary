@@ -29,6 +29,9 @@
 
 ```
 Antigravity-Chinese-Dictionary/
+├── assets/                      # 社区展示与交流群二维码资源
+│   ├── qq_group_qrcode.png      # QQ 交流群二维码 (群号: 222403941)
+│   └── wechat_group_qrcode.png  # 微信交流群二维码
 ├── dicts/                       # 简体中文分片词典 (纯 JSON, 5,571 词条)
 │   ├── 01-common.json           # 通用基础词汇 (2,962 词条)
 │   ├── 02-menu.json             # 顶栏与系统菜单 (392 词条)
@@ -82,7 +85,19 @@ Antigravity-Chinese-Dictionary/
 
 ---
 
-## 5. 免责声明与禁止倒卖
+## 5. 社区交流群
+
+欢迎加入社区交流群，探讨词条优化、提示词编写与本地化开发经验：
+
+| QQ 交流群 | 微信交流群 |
+| :---: | :---: |
+| ![QQ 交流群二维码](./assets/qq_group_qrcode.png) | ![微信交流群二维码](./assets/wechat_group_qrcode.png) |
+| **群号：222403941** | **Antigravity Nexus 交流群** |
+| 验证信息：`Antigravity` | 扫码直接加入（若群满请提 Issue） |
+
+---
+
+## 6. 免责声明与禁止倒卖
 
 1. **研究目的**：本项目仅为文本数据集，供开发者进行软件本地化与词汇对齐参考；
 2. **免责条款**：本项目按现状提供，使用者自行评估并承担使用风险；

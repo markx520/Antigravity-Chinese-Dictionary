@@ -28,6 +28,9 @@ A clean, comprehensive, and verified Chinese localization dictionary dataset for
 
 ```
 Antigravity-Chinese-Dictionary/
+├── assets/                      # Community QR codes and assets
+│   ├── qq_group_qrcode.png      # QQ community QR code (ID: 222403941)
+│   └── wechat_group_qrcode.png  # WeChat community QR code
 ├── dicts/                       # Simplified Chinese slices (5,571 terms)
 │   ├── 01-common.json           # General vocabulary (2,962 terms)
 │   ├── 02-menu.json             # Top bar & system menus (392 terms)
@@ -77,7 +80,19 @@ Load JSON from `dist/` directly:
 
 ---
 
-## 5. Disclaimer
+## 5. Community & Discussion
+
+Join the community for localization contributions, prompt engineering, and developer support:
+
+| QQ Group | WeChat Group |
+| :---: | :---: |
+| ![QQ Group QR Code](./assets/qq_group_qrcode.png) | ![WeChat Group QR Code](./assets/wechat_group_qrcode.png) |
+| **Group ID: 222403941** | **Antigravity Nexus Group** |
+| Verification: `Antigravity` | Scan via WeChat |
+
+---
+
+## 6. Disclaimer
 
 1. **Research Purpose**: For software localization and terminology alignment research;
 2. **As-Is Basis**: Provided under MIT License without warranty of any kind;
