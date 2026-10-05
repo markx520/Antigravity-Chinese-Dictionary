@@ -1,0 +1,17 @@
+{
+  "File": "ファイル",
+  "Edit": "編集",
+  "View": "表示",
+  "Selection": "選択",
+  "Find": "検索",
+  "Go": "移動",
+  "Run": "実行",
+  "Terminal": "ターミナル",
+  "Help": "ヘルプ",
+  "Window": "ウィンドウ",
+  "Preferences": "環境設定",
+  "New Window": "新規ウィンドウ",
+  "Open...": "開く...",
+  "Close Window": "ウィンドウを閉じる",
+  "Quit Antigravity": "Antigravity を終了"
+}

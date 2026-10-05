@@ -1,116 +1,93 @@
 [English](README_EN.md) | 简体中文
 
-# Antigravity 中文本地化词典
+# Antigravity 多语言本地化词典
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Terms: 5,500+](https://img.shields.io/badge/Terms-5%2C500%2B-green.svg)](dist/zh-cn-ui-dictionary.json)
-[![Format: JSON](https://img.shields.io/badge/Format-Pure%20JSON-brightgreen.svg)](dicts/)
+[![Terms: 5,800+](https://img.shields.io/badge/Terms-5%2C800%2B-green.svg)](dist/zh-cn-ui-dictionary.json)
+[![Locales: zh--CN | zh--TW | ja--JP | en--US](https://img.shields.io/badge/Locales-zh--CN%20%7C%20zh--TW%20%7C%20ja--JP%20%7C%20en--US-blueviolet.svg)](locales/)
 [![Support: Antigravity v2.18.1 / v2.19.1+](https://img.shields.io/badge/Antigravity-v2.18.1%20%7C%20v2.19.1%2B-orange.svg)](https://antigravity.google)
 
-本项目专为 Google Antigravity 智能体开发环境整理**纯净中文本地化词典数据集**。
+专为 Google Antigravity 整理的**纯净多语言本地化词典数据集**。
 
 ---
 
 ## 1. 项目概述
 
-为社区开发者与本地化爱好者提供高质量、经过防死循环清洗的母语词库资产：
-1. **纯净数据资产**：标准键值对字典，开箱即用；
-2. **多语言双模支持**：
-   - 简体中文：收录 5,571 条全量核心词条；
-   - 繁体中文：收录 5,075 条核心词条；
-3. **数据纯净合规**：
-   - 剔除翻译值包含键名自身的自递归条目，避免渲染死循环；
-   - 完整保护动态占位符；
-   - 剥离多余英文翻译对照括号。
+为开源社区提供通过四重安全审计门禁的高质量母语词库资产：
+1. **多语言全矩阵支持**：
+   - 简体中文（zh-CN）：收录 5,807 条全量核心词条；
+   - 繁体中文（zh-TW）：收录 5,087 条核心词条；
+   - 日本語（ja-JP）：收录 47 条核心交互与菜单词条；
+   - 英语基准（en-US）：官方原版元数据基线；
+2. **四重安全审计门禁**：
+   - 占位符守恒：完整保护 `${command}` 与 `{0}`，防止授权死循环；
+   - 防自递归堆叠：剔除翻译值包含键名自身的自递归条目；
+   - 品牌词绝对守恒：`Antigravity`、`Google` 保持英文原词；
+   - 代码与路径绝对免疫：代码语法、扩展名（`.js`, `.py`, `.json`, `.md`）与文件路径绝对保持原始英文，零误伤；
+   - 单语纯正性：剥离多余英文对照括号。
 
 ---
 
-## 2. 目录数据结构
+## 2. 目录结构速查
 
 ```
 Antigravity-Chinese-Dictionary/
-├── assets/                      # 社区展示与交流群二维码资源
-│   ├── qq_group_qrcode.png      # QQ 交流群二维码 (群号: 222403941)
-│   └── wechat_group_qrcode.png  # 微信交流群二维码
-├── dicts/                       # 简体中文分片词典 (纯 JSON, 5,571 词条)
-│   ├── 01-common.json           # 通用基础词汇 (2,962 词条)
-│   ├── 02-menu.json             # 顶栏与系统菜单 (392 词条)
-│   ├── 03-chat-agent.json       # 智能体与对话会话 (905 词条)
-│   ├── 04-settings.json         # 设置中心与配置 (428 词条)
-│   ├── 05-mcp-tools.json        # MCP 与插件扩展 (328 词条)
-│   ├── 06-workbench-ide.json    # 工作台与向导编辑器 (450 词条)
-│   └── 07-notifications.json    # 通知与系统状态 (284 词条)
-├── dicts_tw/                    # 繁体中文分片词典 (纯 JSON, 5,075 词条)
-│   ├── 01-common.json           # 通用基础词汇 (2,606 词条)
-│   ├── 02-menu.json             # 顶栏与系统菜单 (389 词条)
-│   ├── 03-chat-agent.json       # 智能体与对话会话 (840 词条)
-│   ├── 04-settings.json         # 设置中心与配置 (416 词条)
-│   ├── 05-mcp-tools.json        # MCP 与插件扩展 (302 词条)
-│   ├── 06-workbench-ide.json    # 工作台与向导编辑器 (425 词条)
-│   └── 07-notifications.json    # 通知与系统状态 (275 词条)
+├── locales/                     # 现代解耦多语言包
+│   ├── zh-CN/                   # 简体中文 (7分片, 5,807 词条)
+│   ├── zh-TW/                   # 繁体中文 (7分片, 5,087 词条)
+│   ├── ja-JP/                   # 日本語 (2分片, 47 词条)
+│   └── en-US/                   # 英语基线元数据
+├── dicts/                       # 经典兼容分片 (简体中文)
+├── dicts_tw/                    # 经典兼容分片 (繁体中文)
+├── dicts_ja/                    # 经典兼容分片 (日本語)
 ├── dist/                        # 聚合单文件主字典 (开箱即用)
-│   ├── zh-cn-ui-dictionary.json # 权威简体主字典 (5,571 词条)
-│   └── zh-tw-ui-dictionary.json # 权威繁体主字典 (5,075 词条)
-├── LICENSE                      # 开源许可证
-├── README.md                    # 中文说明文档
-└── README_EN.md                 # 英文说明文档
+│   ├── zh-cn-ui-dictionary.json # 权威简体主字典 (5,807 词条)
+│   ├── zh-tw-ui-dictionary.json # 权威繁体主字典 (5,087 词条)
+│   └── ja-jp-ui-dictionary.json # 权威日文主字典 (47 词条)
+├── build-dictionary.js          # 多语言独立构建器与四重审计流水线
+├── LICENSE                      # 开源许可证 (MIT)
+└── README.md                    # 说明文档
 ```
 
 ---
 
-## 3. 使用方式
+## 3. 使用方式与自主构建
 
-直接读取 `dist/` 目录下的聚合单文件 JSON 字典，或根据实际业务场景按需合并 `dicts/` 下的功能分片。
+### 3.1 直接载入单文件字典
+直接读取 `dist/` 目录下的聚合单文件 JSON 字典，或从 `locales/<lang>/dictionary.json` 引用：
 
-键值结构示例：
 ```json
 {
   "New Window": "新建窗口",
   "Open Project": "打开项目",
   "Command Palette": "命令面板",
   "Connect to WSL": "连接到 WSL",
-  "Default Distro": "默认发行版",
-  "Download the Antigravity IDE": "下载 Antigravity IDE",
-  "Attach Antigravity server logs": "附加 Antigravity 服务器日志"
+  "Default Distro": "默认发行版"
 }
+```
+
+### 3.2 自主构建与安全审计
+克隆仓库后运行构建脚本，自动执行四重门禁并编译产物（退出码为 0）：
+
+```bash
+# 构建并校验全部语言包
+node build-dictionary.js all
+
+# 仅构建指定语言包 (例如 zh-CN)
+node build-dictionary.js --locale zh-CN
 ```
 
 ---
 
-## 4. Star 增长趋势
-
-<a href="https://star-history.com/#markx520/Antigravity-Chinese-Dictionary&Date">
-  <img src="https://api.star-history.com/svg?repos=markx520/Antigravity-Chinese-Dictionary&type=Date" alt="Star 增长趋势图" width="100%" />
-</a>
-
----
-
-## 5. 社区交流群
-
-欢迎加入社区交流群，探讨词条优化、提示词编写与本地化开发经验：
+## 4. 社区交流与免责声明
 
 | QQ 交流群 | 微信交流群 |
 | :---: | :---: |
 | ![QQ 交流群二维码](./assets/qq_group_qrcode.png) | ![微信交流群二维码](./assets/wechat_group_qrcode.png) |
 | **群号：222403941** | **Antigravity Nexus 交流群** |
-| 验证信息：`Antigravity` | 扫码直接加入（若群满请提 Issue） |
-
----
-
-## 6. 贡献者
-
-本项目由开源社区与以下贡献者共同维护：
-
-| [<img src="https://github.com/markx520.png" width="80" height="80" style="border-radius: 50%;" alt="markx520" /><br /><sub><b>markx520</b></sub>](https://github.com/markx520)<br />[核心维护者 / Creator] |
-| :---: |
-
-欢迎更多开发者参与贡献！详见 [分片词典目录](dicts/)。
-
----
-
-## 7. 免责声明与禁止倒卖
+| 验证信息：`Antigravity` | 扫码直接加入 |
 
 1. **研究目的**：本项目仅为文本数据集，供开发者进行软件本地化与词汇对齐参考；
 2. **免责条款**：本项目按现状提供，使用者自行评估并承担使用风险；
-3. **商标声明**：Google、Antigravity 标识为 Google LLC 的资产，本项目与 Google 无直接从属关系；
-4. **禁止倒卖**：本项目基于 MIT 协议免费开源，严禁二次打包加价销售或商业牟利。
+3. **商标声明**：Google、Antigravity 标识为 Google LLC 的资产；
+4. **禁止倒卖**：本项目基于 MIT 协议免费开源，严禁二次打包加价销售。

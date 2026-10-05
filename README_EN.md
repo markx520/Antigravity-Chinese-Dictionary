@@ -1,111 +1,76 @@
 English | [简体中文](README.md)
 
-# Antigravity Chinese Dictionary
+# Antigravity Multi-Language Dictionary
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Terms: 5,500+](https://img.shields.io/badge/Terms-5%2C500%2B-green.svg)](dist/zh-cn-ui-dictionary.json)
-[![Format: JSON](https://img.shields.io/badge/Format-Pure%20JSON-brightgreen.svg)](dicts/)
-[![Support: Antigravity v2.18.1 / v2.19.1+](https://img.shields.io/badge/Antigravity-v2.18.1%20%7C%20v2.19.1%2B-orange.svg)](https://antigravity.google)
+[![Terms: 5,800+](https://img.shields.io/badge/Terms-5%2C800%2B-green.svg)](dist/zh-cn-ui-dictionary.json)
+[![Locales](https://img.shields.io/badge/Locales-zh--CN%20%7C%20zh--TW%20%7C%20ja--JP%20%7C%20en--US-blueviolet.svg)](locales/)
+[![Support](https://img.shields.io/badge/Antigravity-v2.18.1%20%7C%20v2.19.1%2B-orange.svg)](https://antigravity.google)
 
-A clean, comprehensive, and verified Chinese localization dictionary dataset for Google Antigravity.
+Clean multi-language dictionary datasets for Google Antigravity.
 
 ---
 
 ## 1. Overview
 
-1. **Pure Data**: Standard JSON key-value pairs, ready to use;
-2. **Dual Mode**:
-   - Simplified Chinese: 5,571 verified terms;
-   - Traditional Chinese: 5,075 terms;
-3. **Clean & Verified**:
-   - Zero-recursion safety: eliminated self-recursive translation keys;
-   - Preserved dynamic placeholders;
-   - Stripped redundant bilingual brackets.
+Localization datasets verified through four safety audit gates:
+1. **Multi-Language Coverage**:
+   - Simplified Chinese (zh-CN): 5,807 terms;
+   - Traditional Chinese (zh-TW): 5,087 terms;
+   - Japanese (ja-JP): 47 terms;
+   - English Baseline (en-US): Official metadata;
+2. **Four Safety Gates**:
+   - Placeholders: Preserves `${command}` and `{0}`;
+   - Anti-Recursion: Prevents infinite DOM recursion;
+   - Brand Preservation: Keeps `Antigravity` in original English;
+   - Code & Path Immunity: Extensions (`.js`, `.py`, `.md`) and paths remain 100% untouched.
 
 ---
 
-## 2. Structure
+## 2. Directory Structure
 
 ```
 Antigravity-Chinese-Dictionary/
-├── assets/                      # Community QR codes and assets
-│   ├── qq_group_qrcode.png      # QQ community QR code (ID: 222403941)
-│   └── wechat_group_qrcode.png  # WeChat community QR code
-├── dicts/                       # Simplified Chinese slices (5,571 terms)
-│   ├── 01-common.json           # General vocabulary (2,962 terms)
-│   ├── 02-menu.json             # Top bar & system menus (392 terms)
-│   ├── 03-chat-agent.json       # Agent & conversation (905 terms)
-│   ├── 04-settings.json         # Settings & configuration (428 terms)
-│   ├── 05-mcp-tools.json        # MCP tools & extensions (328 terms)
-│   ├── 06-workbench-ide.json    # Workbench & wizard (450 terms)
-│   └── 07-notifications.json    # Notifications & status (284 terms)
-├── dicts_tw/                    # Traditional Chinese slices (5,075 terms)
-│   ├── 01-common.json           # General vocabulary (2,606 terms)
-│   ├── 02-menu.json             # Top bar & system menus (389 terms)
-│   ├── 03-chat-agent.json       # Agent & conversation (840 terms)
-│   ├── 04-settings.json         # Settings & configuration (416 terms)
-│   ├── 05-mcp-tools.json        # MCP tools & extensions (302 terms)
-│   ├── 06-workbench-ide.json    # Workbench & wizard (425 terms)
-│   └── 07-notifications.json    # Notifications & status (275 terms)
-├── dist/                        # Complete dictionaries
-│   ├── zh-cn-ui-dictionary.json # Full Simplified Chinese dictionary (5,571 terms)
-│   └── zh-tw-ui-dictionary.json # Full Traditional Chinese dictionary (5,075 terms)
+├── locales/                     # Decoupled packages (zh-CN, zh-TW, ja-JP, en-US)
+├── dicts/                       # Compatibility slices (Simplified Chinese)
+├── dicts_tw/                    # Compatibility slices (Traditional Chinese)
+├── dicts_ja/                    # Compatibility slices (Japanese)
+├── dist/                        # Aggregated JSON dictionaries
+│   ├── zh-cn-ui-dictionary.json # Simplified Chinese (5,807 terms)
+│   ├── zh-tw-ui-dictionary.json # Traditional Chinese (5,087 terms)
+│   └── ja-jp-ui-dictionary.json # Japanese (47 terms)
+├── build-dictionary.js          # Package builder & audit pipeline
 ├── LICENSE                      # MIT License
-├── README.md                    # Chinese documentation
 └── README_EN.md                 # English documentation
 ```
 
 ---
 
-## 3. Usage
+## 3. Usage & Build
 
-Load JSON from `dist/` directly:
-```json
-{
-  "New Window": "新建窗口",
-  "Open Project": "打开项目",
-  "Command Palette": "命令面板",
-  "Connect to WSL": "连接到 WSL",
-  "Default Distro": "默认发行版"
-}
+### 3.1 Direct JSON Loading
+Load JSON from `dist/` or `locales/<lang>/dictionary.json` directly.
+
+### 3.2 Build & Audit
+Compile packages and verify safety gates (exit code 0):
+
+```bash
+# Build all locales
+node build-dictionary.js all
+
+# Build specific locale
+node build-dictionary.js --locale zh-CN
 ```
 
 ---
 
-## 4. Star History
+## 4. Community & Disclaimer
 
-<a href="https://star-history.com/#markx520/Antigravity-Chinese-Dictionary&Date">
-  <img src="https://api.star-history.com/svg?repos=markx520/Antigravity-Chinese-Dictionary&type=Date" alt="Star History Chart" width="100%" />
-</a>
-
----
-
-## 5. Community & Discussion
-
-Join the community for localization contributions, prompt engineering, and developer support:
-
-| QQ Group | WeChat Group |
+| QQ Group (222403941) | WeChat Community |
 | :---: | :---: |
-| ![QQ Group QR Code](./assets/qq_group_qrcode.png) | ![WeChat Group QR Code](./assets/wechat_group_qrcode.png) |
-| **Group ID: 222403941** | **Antigravity Nexus Group** |
-| Verification: `Antigravity` | Scan via WeChat |
+| ![QQ QR](./assets/qq_group_qrcode.png) | ![WeChat QR](./assets/wechat_group_qrcode.png) |
 
----
-
-## 6. Contributors
-
-Maintained by the open-source community and the following contributors:
-
-| [<img src="https://github.com/markx520.png" width="80" height="80" style="border-radius: 50%;" alt="markx520" /><br /><sub><b>markx520</b></sub>](https://github.com/markx520)<br />[Creator & Maintainer] |
-| :---: |
-
-Contributions are welcome! Please feel free to submit an Issue or Pull Request.
-
----
-
-## 7. Disclaimer
-
-1. **Research Purpose**: For software localization and terminology alignment research;
-2. **As-Is Basis**: Provided under MIT License without warranty of any kind;
+1. **Research Purpose**: For software localization research;
+2. **As-Is Basis**: Provided under MIT License;
 3. **Trademark Notice**: Google and Antigravity are trademarks of Google LLC;
-4. **Non-Commercial**: Strictly prohibits reselling or repackaging this free dataset.
+4. **Non-Commercial**: Reselling or repackaging is strictly prohibited.

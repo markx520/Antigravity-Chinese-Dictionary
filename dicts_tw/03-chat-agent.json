@@ -391,7 +391,7 @@
   "Hide tools": "隱藏工具",
   "How to render rich interactive HTML widgets inline in the chat or as standalone artifacts. Use this skill when you want to show the user diagrams, data visualizations, interactive controls, educational walkthroughs, or any rich visual content beyond plain text and markdown.": "如何在對話中以內聯方式或作為獨立工件渲染豐富的互動式 HTML 小部件。當需要向使用者展示架構圖表、資料視覺化、互動式控制元件、教程回顧或超出純文字與 Markdown 的豐富視覺內容時使用此技能。",
   "If enabled, you can manage your conversations from the Antigravity website. Please reload the application to apply this setting.": "啟用後，你可以從 Antigravity 網站管理對話。請重新載入應用以應用此設定。",
-  "In addition to the custom skills folder, Antigravity will search the following paths in order to find skills for the agent.": "除了自訂技能資料夾之外，反重力智慧引擎還將依序搜尋以下路徑，以為代理載入並查找相應的技能元件。",
+  "In addition to the custom skills folder, Antigravity will search the following paths in order to find skills for the agent.": "除了自訂技能資料夾之外，Antigravity 還將依序搜尋以下路徑，以為代理載入並查找相應的技能元件。",
   "in the conversation input box.": "在對話輸入框中呼叫。",
   "in this conversation": "在本次對話中",
   "Inherit model": "繼承模型",
