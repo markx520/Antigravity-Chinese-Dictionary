@@ -1,0 +1,10 @@
+{
+  "Agent": "エージェント",
+  "Chat": "チャット",
+  "Chat History": "チャット履歴",
+  "Cloud Model": "クラウドモデル",
+  "Max Output Tokens": "最大出力トークン数",
+  "New Conversation": "新規会話",
+  "Quota": "クォータ",
+  "Subagent": "サブエージェント"
+}

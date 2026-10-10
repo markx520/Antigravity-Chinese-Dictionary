@@ -6,3 +6,18 @@ Thumbs.db
 scratch/
 .vscode/
 .idea/
+
+# 绝密凭据与密钥物理忽略门禁
+*.key
+*.pem
+*.pfx
+*.p12
+*.cer
+*.token
+*token*
+*secret*
+*credential*
+.env
+.env.*
+secrets/
+PUSH_PERMIT

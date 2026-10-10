@@ -1,9 +1,9 @@
 {
   "locale": "zh-CN",
   "name": "简体中文 (Simplified Chinese)",
-  "slicesCount": 7,
-  "termsCount": 5807,
-  "fileSizeKB": 397.5,
-  "sha256": "07da4fd86569038bdabb61e65cd7bc0765f316bf3945312b8992535125fafce0",
-  "updatedAt": "2026-10-05T15:00:15.872Z"
+  "slicesCount": 62,
+  "termsCount": 23284,
+  "fileSizeKB": 1693.7,
+  "sha256": "2762a06a5c0434fdc0218ff01d264f76f8eebebb9af06427565fd7dbad8cf761",
+  "updatedAt": "2026-10-10T09:14:48.311Z"
 }
