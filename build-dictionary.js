@@ -22,41 +22,33 @@ const REPO_ROOT = __dirname;
 const LOCALES_ROOT = path.join(REPO_ROOT, 'locales');
 const DIST_ROOT = path.join(REPO_ROOT, 'dist');
 
-const LOCALE_REGISTRY = [
-  {
-    code: 'zh-CN',
-    aliases: ['cn', 'zh-cn', 'zh'],
-    name: '简体中文 (Simplified Chinese)',
-    dir: path.join(LOCALES_ROOT, 'zh-CN'),
-    dictsDir: path.join(LOCALES_ROOT, 'zh-CN', 'dicts'),
-    targetFile: path.join(LOCALES_ROOT, 'zh-CN', 'dictionary.json'),
-    manifestFile: path.join(LOCALES_ROOT, 'zh-CN', 'manifest.json'),
-    legacyTarget: path.join(DIST_ROOT, 'zh-cn-ui-dictionary.json'),
-    legacyDictsDir: path.join(REPO_ROOT, 'dicts')
-  },
-  {
-    code: 'zh-TW',
-    aliases: ['tw', 'zh-tw'],
-    name: '繁体中文 (Traditional Chinese)',
-    dir: path.join(LOCALES_ROOT, 'zh-TW'),
-    dictsDir: path.join(LOCALES_ROOT, 'zh-TW', 'dicts'),
-    targetFile: path.join(LOCALES_ROOT, 'zh-TW', 'dictionary.json'),
-    manifestFile: path.join(LOCALES_ROOT, 'zh-TW', 'manifest.json'),
-    legacyTarget: path.join(DIST_ROOT, 'zh-tw-ui-dictionary.json'),
-    legacyDictsDir: path.join(REPO_ROOT, 'dicts_tw')
-  },
-  {
-    code: 'ja-JP',
-    aliases: ['ja', 'ja-jp', 'jp'],
-    name: '日本語 (Japanese)',
-    dir: path.join(LOCALES_ROOT, 'ja-JP'),
-    dictsDir: path.join(LOCALES_ROOT, 'ja-JP', 'dicts'),
-    targetFile: path.join(LOCALES_ROOT, 'ja-JP', 'dictionary.json'),
-    manifestFile: path.join(LOCALES_ROOT, 'ja-JP', 'manifest.json'),
-    legacyTarget: path.join(DIST_ROOT, 'ja-jp-ui-dictionary.json'),
-    legacyDictsDir: path.join(REPO_ROOT, 'dicts_ja')
-  }
+const ALL_LOCALES_CONFIG = [
+  { code: 'zh-CN', aliases: ['cn', 'zh-cn', 'zh'], name: '简体中文 (Simplified Chinese)', legacyDict: 'dicts' },
+  { code: 'zh-TW', aliases: ['tw', 'zh-tw'], name: '繁体中文 (Traditional Chinese)', legacyDict: 'dicts_tw' },
+  { code: 'ja-JP', aliases: ['ja', 'ja-jp', 'jp'], name: '日本語 (Japanese)', legacyDict: 'dicts_ja' },
+  { code: 'ko-KR', aliases: ['ko', 'ko-kr', 'kr'], name: '한국어 (Korean)' },
+  { code: 'de-DE', aliases: ['de', 'de-de'], name: 'Deutsch (German)' },
+  { code: 'fr-FR', aliases: ['fr', 'fr-fr'], name: 'Français (French)' },
+  { code: 'es-ES', aliases: ['es', 'es-es'], name: 'Español (Spanish)' },
+  { code: 'it-IT', aliases: ['it', 'it-it'], name: 'Italiano (Italian)' },
+  { code: 'pt-BR', aliases: ['pt', 'pt-br', 'br'], name: 'Português (Portuguese)' },
+  { code: 'ru-RU', aliases: ['ru', 'ru-ru'], name: 'Русский (Russian)' }
 ];
+
+const LOCALE_REGISTRY = ALL_LOCALES_CONFIG.map(cfg => {
+  const distFileName = `${cfg.code.toLowerCase()}-ui-dictionary.json`;
+  return {
+    code: cfg.code,
+    aliases: cfg.aliases,
+    name: cfg.name,
+    dir: path.join(LOCALES_ROOT, cfg.code),
+    dictsDir: path.join(LOCALES_ROOT, cfg.code, 'dicts'),
+    targetFile: path.join(LOCALES_ROOT, cfg.code, 'dictionary.json'),
+    manifestFile: path.join(LOCALES_ROOT, cfg.code, 'manifest.json'),
+    legacyTarget: path.join(DIST_ROOT, distFileName),
+    legacyDictsDir: cfg.legacyDict ? path.join(REPO_ROOT, cfg.legacyDict) : null
+  };
+});
 
 const args = process.argv.slice(2);
 let targetLocale = 'all';
